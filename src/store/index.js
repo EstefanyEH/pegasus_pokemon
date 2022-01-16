@@ -39,8 +39,9 @@ export default createStore({
     state.favoritos.push(personaje)
   }, 
 
-  DELETE_POKE(state, index){
-    state.favoritos.splice(index, 1)
+  DELETE_POKE(state, nombre){
+    let index = state.pokemones.findIndex(poke => poke.nombre === nombre )
+    state.pokemones.splice(index, 1)
   }
   
 

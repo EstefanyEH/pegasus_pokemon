@@ -74,11 +74,11 @@ export default {
     return {
       first: 0,
       totalRecords: 2,
-      data: null,
+      data:[],
     };
   },
   mounted() {
-    this.data =[];
+    this.data=[];
   },
   computed: {
     ...mapGetters(["pokemon"]),
@@ -92,13 +92,15 @@ export default {
       this.data.push(poke);
     },
 
-    addFavorito(data) {
-      this.add_poke(data)
-      console.log(data)
+    addFavorito() {
+      let favorito = this.data
+      this.add_poke(favorito)
+      console.log(favorito)
     },
 
     remove(i) {
       this.delete_poke(i);
+      this.data=[]
     },
 
    
