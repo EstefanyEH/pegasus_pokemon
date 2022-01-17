@@ -40,8 +40,8 @@ export default createStore({
   }, 
 
   DELETE_POKE(state, nombre){
-    let index = state.pokemones.findIndex(poke => poke.nombre === nombre )
-    state.pokemones.splice(index, 1)
+    let index = state.pokemones.findIndex(p => p.nombre === nombre)
+    state.pokemones.splice(index,1)
   }
   
 
