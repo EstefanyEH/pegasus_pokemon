@@ -113,7 +113,7 @@ export default {
     addFavorito() {
       let favorito = this.data;
       this.add_favorito(favorito);
-      //console.log(favorito);
+      console.log(favorito);
     },
 
     remove(name) {
